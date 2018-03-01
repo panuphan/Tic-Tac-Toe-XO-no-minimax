@@ -10,6 +10,8 @@ def bot(button,x,y):
     if Step == []:
         for y in range(3):
                  print('at ',1,y,'have >',button[1,y]['text'])
+                 if button[1,1]['text'] == 'X':
+                     break
                  if button[1,y]['text'] ==  'X':
                     r=random.randint(0,1)
                     if r==1:
@@ -24,6 +26,7 @@ def bot(button,x,y):
                     if r==1:
                         r+=1
                     button[y,r]['text'] =  'O'
+                    Step.append(True)
                     print('at ',y,r,'have >',button[y,r]['text'])
                     return
                 
@@ -50,6 +53,8 @@ def bot(button,x,y):
                 if button[x,y]['text'] == ' ':
                     button[x,y]['text'] ='O'
                     return
+        if button[1,1]['text'] == ' ':
+             button[1,1]['text'] = 'O'
 
         else:
             temp = False
