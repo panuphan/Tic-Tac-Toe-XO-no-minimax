@@ -201,6 +201,9 @@ def BotMode(button):
     global Bot
     reset(button)
     Bot= True
+    
+
+    
 #main
 root = Tk()
 root.title("Tic Tac Toe XO")
